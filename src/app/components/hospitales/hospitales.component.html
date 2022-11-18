@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h1 class="text-info text-center">tabla Hospitales</h1>
+    <table *ngIf="hospitales" class="table table-bordered table-info">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Nº camas</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hosp of hospitales">
+                <td>{{hosp.idhospital}}</td>
+                <td>{{hosp.nombre}}</td>
+                <td>{{hosp.direccion}}</td>
+                <td>{{hosp.telefono}}</td>
+                <td>{{hosp.camas}}</td>
+                <td>
+                    <a class="btn btn-warning me-2" [routerLink]="['/editarhospital/', hosp.idhospital]">
+                        Editar
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
