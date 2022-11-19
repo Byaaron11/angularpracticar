@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h1 class="text-warning text-center text-capitalize">Modificar personaje</h1>
+    <form #formPersonajes="ngForm" (ngSubmit)="modificarPersonaje()">
+        <select *ngIf="personajes" class="form-select" #selectpersonajes name="selectpersonajes">
+            <option *ngFor="let pj of personajes" value="{{pj.idPersonaje}}">
+                {{pj.nombre}}
+            </option>
+        </select><br/>
+        <select *ngIf="series" class="form-select" #selectseries name="selectseries">
+            <option *ngFor="let serie of series" value="{{serie.idSerie}}">
+                {{serie.nombre}}
+            </option>
+        </select><br/>
+        <button class="btn btn-warning mt-2">Modificar</button>
+    </form>
+</div>
+
+
+

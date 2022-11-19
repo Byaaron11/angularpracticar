@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h1 class="text-primary text-center text-capitalize">Nuevo personaje</h1>
+    <form #formPersonaje="ngForm" (ngSubmit)="crearPersonaje()">
+        <label>Nombre:</label>
+        <input type="text" 
+        #cajanombre name="cajanombre" 
+        class="form-control"/>
+        <label>Imagen:</label>
+        <input type="text" 
+        #cajaimagen name="cajaimagen" 
+        class="form-control"/>
+        <label>Serie:</label>
+        <select *ngIf="series" class="form-select" #selectserie name="selectserie">
+            <option *ngFor="let serie of series" value="{{serie.idSerie}}">
+                {{serie.nombre}}
+            </option>
+        </select><br/>
+        <button class="btn btn-primary mt-2">Create</button>
+    </form>
+</div>
+
+

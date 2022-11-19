@@ -1,31 +1,27 @@
 <div class="container-fluid">
-    <h1 class="text-warning text-center text-capitalize">Editar hospital</h1>
-    <form *ngIf="hospital" #formHospital="ngForm" (ngSubmit)="modificarHospital()">
+    <h1 class="text-primary text-center text-capitalize">Nuevo hospital</h1>
+    <form #formHospital="ngForm" (ngSubmit)="crearHospital()">
         <label>Id:</label>
         <input type="text" 
         #cajaid name="cajaid" 
-        disabled value="{{hospital.idhospital}}"
         class="form-control"/>
         <label>Nombre:</label>
         <input type="text" 
         #cajanombre name="cajanombre" 
-        value="{{hospital.nombre}}"
         class="form-control"/>
         <label>Direccion:</label>
         <input type="text" 
         #cajadireccion name="cajadireccion"
-        value="{{hospital.direccion}}"
         class="form-control" 
         />
         <label>Teléfono:</label>
         <input type="text" 
         #cajatelefono name="cajatelefono"
-        value="{{hospital.telefono}}" 
         class="form-control"/>
         <label>Camas:</label>
         <input type="text" #cajacamas name="cajacamas" 
-        value="{{hospital.camas}}"
         class="form-control"/>
-        <button class="btn btn-warning mt-3">Modificar</button>
+        <button class="btn btn-primary mt-3">Create</button>
     </form>
 </div>
+

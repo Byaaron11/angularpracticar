@@ -9,6 +9,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { HospitalesComponent } from './components/hospitales/hospitales.component';
 import { EditarhospitalComponent } from './components/editarhospital/editarhospital.component';
+import { CrearhospitalComponent } from './components/crearhospital/crearhospital.component';
+import { DetalleserieComponent } from './components/detalleserie/detalleserie.component';
+import { PersonajesComponent } from './components/personajes/personajes.component';
+import { CrearpersonajeComponent } from './components/crearpersonaje/crearpersonaje.component';
+import { ModificarpersonajeComponent } from './components/modificarpersonaje/modificarpersonaje.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { EditarhospitalComponent } from './components/editarhospital/editarhospi
     MenuComponent,
     HomeComponent,
     HospitalesComponent,
-    EditarhospitalComponent
+    EditarhospitalComponent,
+    CrearhospitalComponent,
+    DetalleserieComponent,
+    PersonajesComponent,
+    CrearpersonajeComponent,
+    ModificarpersonajeComponent
   ],
   imports: [
     BrowserModule,

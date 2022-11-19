@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h1 class="text-primary">Personajes</h1>
+    <table *ngIf="personajes" class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pj of personajes">
+                <td class="text-center">
+                    <img src="{{pj.imagen}}" width="100" class="img-thumbnail"/>
+                </td>
+                <td>{{pj.nombre}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="eliminarPersonaje(pj.idPersonaje)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

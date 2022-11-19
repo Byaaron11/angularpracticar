@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="text-info text-center">tabla Hospitales</h1>
+    <h1 class="text-info text-center display-1">Tabla Hospitales</h1>
     <table *ngIf="hospitales" class="table table-bordered table-info">
         <thead>
             <tr>
@@ -22,8 +22,12 @@
                     <a class="btn btn-warning me-2" [routerLink]="['/editarhospital/', hosp.idhospital]">
                         Editar
                     </a>
+                    <button class="btn btn-danger me-2" (click)="borrarHospital(hosp.idhospital)">Eliminar</button>
                 </td>
             </tr>
         </tbody>
     </table>
+    <div *ngIf="!hospitales" class="container-fluid d-flex justify-content-center">
+        <img src="https://i.pinimg.com/originals/07/24/88/0724884440e8ddd0896ff557b75a222a.gif"/>
+    </div>
 </div>
