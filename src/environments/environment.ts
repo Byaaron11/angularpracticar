@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   hospitales: "https://apicrudhospital.azurewebsites.net/",
-  series: "https://apiseriespersonajes.azurewebsites.net"
+  series: "https://apiseriespersonajes.azurewebsites.net",
+  empleadosAuth: "https://apiempleadoscoreoauth.azurewebsites.net"
 };
 
 /*

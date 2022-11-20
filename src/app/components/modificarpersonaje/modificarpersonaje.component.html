@@ -13,6 +13,17 @@
         </select><br/>
         <button class="btn btn-warning mt-2">Modificar</button>
     </form>
+    <hr/>
+    <div class="container text-center" *ngIf="estado">
+        <div *ngIf="serieSelected">
+            <h1 class="text-danger">{{serieSelected.nombre}}</h1>
+            <img src="{{serieSelected.imagen}}" class="img" width="500"/>
+        </div>
+        <div *ngIf="personajeSelected">
+            <h1 class="text-primary">{{personajeSelected.nombre}}</h1>
+            <img src="{{personajeSelected.imagen}}" class="img" width="250"/>
+        </div>
+    </div>
 </div>
 
 

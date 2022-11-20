@@ -12,18 +12,32 @@ import { Router } from '@angular/router';
 export class ModificarpersonajeComponent implements OnInit {
 
   public series!: Array<Serie>
+  public serieSelected!: Serie
+
   public personajes!: Array<Personaje>
+  public personajeSelected!: Personaje
+
+  public estado: boolean;
 
   @ViewChild("selectpersonajes") selectPersonajes!: ElementRef;
   @ViewChild("selectseries") selectSeries!: ElementRef;
 
-  constructor(private _service: PersonajeseriesService, private _router: Router) { }
+  constructor(private _service: PersonajeseriesService, private _router: Router) {
+    this.estado = false;
+  }
 
   modificarPersonaje(): void{
     var idPersonaje = parseInt(this.selectPersonajes.nativeElement.value);
     var idSerie = parseInt(this.selectSeries.nativeElement.value);
     this._service.putPersonaje(idPersonaje, idSerie).subscribe(res=>{
-      this._router.navigate(['/personajes', idSerie]);
+      //this._router.navigate(['/personajes', idSerie]);
+      this.estado = true;
+      this._service.getPersonajeById(idPersonaje).subscribe(res=>{
+        this.personajeSelected = res;
+      });
+      this._service.getSerieById(idSerie).subscribe(res=>{
+        this.serieSelected = res;
+      });
     });
   }
 

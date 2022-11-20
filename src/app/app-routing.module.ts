@@ -4,8 +4,10 @@ import { CrearhospitalComponent } from './components/crearhospital/crearhospital
 import { CrearpersonajeComponent } from './components/crearpersonaje/crearpersonaje.component';
 import { DetalleserieComponent } from './components/detalleserie/detalleserie.component';
 import { EditarhospitalComponent } from './components/editarhospital/editarhospital.component';
+import { EmpleadosauthComponent } from './components/empleadosauth/empleadosauth.component';
 import { HomeComponent } from './components/home/home.component';
 import { HospitalesComponent } from './components/hospitales/hospitales.component';
+import { LoginComponent } from './components/login/login.component';
 import { ModificarpersonajeComponent } from './components/modificarpersonaje/modificarpersonaje.component';
 import { PersonajesComponent } from './components/personajes/personajes.component';
 
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path:"personajes/:id", component: PersonajesComponent},
   {path:"createpersonaje", component: CrearpersonajeComponent},
   {path:"modificarpersonaje", component: ModificarpersonajeComponent},
+  {path:"login", component: LoginComponent},
+  {path:"empleados", component: EmpleadosauthComponent},
 ];
 
 @NgModule({

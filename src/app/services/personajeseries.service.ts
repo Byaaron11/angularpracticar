@@ -18,6 +18,12 @@ export class PersonajeseriesService {
     return this._http.get(url);
   }
 
+  getPersonajeById(id: number): Observable<any>{
+    var request = "/api/personajes/"+id;
+    var url = environment.series + request;
+    return this._http.get(url);
+  }
+
   getSeries(): Observable<any>{
     var request = "/api/series";
     var url = environment.series + request;

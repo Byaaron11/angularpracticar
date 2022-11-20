@@ -14,6 +14,8 @@ import { DetalleserieComponent } from './components/detalleserie/detalleserie.co
 import { PersonajesComponent } from './components/personajes/personajes.component';
 import { CrearpersonajeComponent } from './components/crearpersonaje/crearpersonaje.component';
 import { ModificarpersonajeComponent } from './components/modificarpersonaje/modificarpersonaje.component';
+import { LoginComponent } from './components/login/login.component';
+import { EmpleadosauthComponent } from './components/empleadosauth/empleadosauth.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ModificarpersonajeComponent } from './components/modificarpersonaje/mod
     DetalleserieComponent,
     PersonajesComponent,
     CrearpersonajeComponent,
-    ModificarpersonajeComponent
+    ModificarpersonajeComponent,
+    LoginComponent,
+    EmpleadosauthComponent
   ],
   imports: [
     BrowserModule,
